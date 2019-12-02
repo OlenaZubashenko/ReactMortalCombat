@@ -3,10 +3,9 @@ import React from 'react';
 const Battle = () => {
     return (
         <ul>
-       <li>3</li>   
-       <li>4</li>
+            <li>From Battle Component</li>
         </ul>
     )
 };
- 
+
 export default Battle;

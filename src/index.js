@@ -1,21 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ChooseHero from './components/ChooseHero/choose-hero';
+import HeroList from './components/HeroList/hero-list';
 import Battle from './components/Battle/battle';
 
 const App = () => {
 
-const sourse = [
-    { name: 'kobra',
-    url: '/img/kobra.png',
-    selected: 'false'
-
-    }
-];
-
     return (
         <div>
-        <ChooseHero resourse = {sourse} />
+        <HeroList />
         <Battle />
         </div>
     )
