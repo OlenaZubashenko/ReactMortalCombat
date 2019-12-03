@@ -11,6 +11,12 @@ export default class HeroList extends React.Component {
       isLoaded: false,
       items: []
     };
+    this.layout = [
+      [1, 2, 3, 4, 5, 6, 7],
+      [8, 9,10,11,12,13,14],
+      [0,15,16,17,18,19, 0],
+      [0,20,21,22,23,24, 0],
+    ];
 
     this.setEventHandlers();
   }
@@ -23,7 +29,9 @@ export default class HeroList extends React.Component {
           {
             name: 'kobra',
             url: '/img/kobra.png',
-            selected: 'false'
+            selected: 'false',
+            row: 0,
+            column: 0
           },
           {
             name: 'kano',
@@ -178,6 +186,7 @@ export default class HeroList extends React.Component {
     if(!this.activeCellId){
       this.activeCellId = 1;
     }
+  
   }
   render() {
     const { error, isLoaded, items } = this.state;
@@ -188,7 +197,7 @@ export default class HeroList extends React.Component {
     } else {
       return (
         <div className='hero-list-wrapper'>
-          <ul className='hero-table'>
+        
             {
               <table>
                 <tbody id='heroes'>
@@ -230,7 +239,7 @@ export default class HeroList extends React.Component {
               </table>
 
             };
-        </ul>
+        
         </div>
 
       );
@@ -240,24 +249,31 @@ export default class HeroList extends React.Component {
   setEventHandlers = () => {
     window.onkeyup = (e) => {
       if (e.key === 'ArrowLeft')
-        this.activeCellId = checkSiblingHero( this.activeCellId,-1);
+        this.activeCellId = moveHorisontal( this.activeCellId,-1);
+
       else if (e.key === 'ArrowRight')
-      this.activeCellId = checkSiblingHero(this.activeCellId, 1);
+      this.activeCellId = moveHorisontal(this.activeCellId, 1);
+
       else if (e.key === 'ArrowUp')
-        checkUpHero();
+      this.activeCellId = moveVertical( this.activeCellId, -1);
+
       else if (e.key === 'ArrowDown')
-        checkDownHero();
+      this.activeCellId = moveVertical( this.activeCellId, 1);
+      
       updateSelection(this.activeCellId);
     }
   }
 }
-const checkUpHero = () => {
-  console.log('up');
+const moveVertical = (activeCellId,i) => {
+  // activeCellId += i;
+  // activeCellId = 
+
+  // activeCellId === 0 ? 0 :
+  //   activeCellId === 25 ? 1 : activeCellId;
+  return  activeCellId;
+    
 };
-const checkDownHero = () => {
-  console.log('down');
-};
-const checkSiblingHero = (activeCellId,i) => {
+const moveHorisontal = (activeCellId,i) => {
   activeCellId += i;
   activeCellId = 
     activeCellId === 0 ? 24 :

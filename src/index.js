@@ -4,11 +4,12 @@ import HeroList from './components/HeroList/hero-list';
 import Battle from './components/Battle/battle';
 
 const App = () => {
+ 
 
     return (
         <div>
         <HeroList />
-        <Battle />
+         <Battle /> 
         </div>
     )
 };
