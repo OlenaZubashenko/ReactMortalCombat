@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '../Hero/hero'
 
+
 import './hero-list.css';
 
 export default class HeroList extends React.Component {
@@ -22,7 +23,7 @@ export default class HeroList extends React.Component {
   }
 
   componentDidMount() {
-    //fetch("https://api.example.com/items")
+  
     new Promise(resolve =>
       setTimeout(() => {
         let data = [
@@ -36,21 +37,25 @@ export default class HeroList extends React.Component {
           {
             name: 'kano',
             url: '/img/kano.jpg',
+            fullImg: '/img/kano.jpg',
             selected: 'false'
           },
           {
             name: 'kobra1',
             url: '/img/kobra.png',
+            fullImg:'/img/kobra.png',
             selected: 'false'
           },
           {
             name: 'kano1',
             url: '/img/kano.jpg',
+            fullImg:'/img/kano.jpg',
             selected: 'false'
           },
           {
             name: 'kabal',
             url: '/img/kabal.png',
+            fullImg: '/img/kabal.png',
             selected: 'false'
           },
           {
@@ -162,12 +167,12 @@ export default class HeroList extends React.Component {
             items: x
           });
         },
-        // Примечание: важно обрабатывать ошибки именно здесь, а не в блоке catch(),
-        // чтобы не перехватывать исключения из ошибок в самих компонентах.
+     
         (err) => {
           this.setState({
             isLoaded: true,
-            error: err
+            error: err,
+           
           });
         }
       )
@@ -220,13 +225,13 @@ export default class HeroList extends React.Component {
                     <td><Hero {...items[13]} /></td>
                   </tr>
                   <tr>
-                    <td rowSpan='2' style={{ background: 'red' }}>tyDbl</td>
+                    <td rowSpan='2'  style={{ background: 'red' }}>  <Hero fullImg = {items.fullImg} /> erf</td>
                     <td><Hero {...items[14]} /></td>
                     <td><Hero {...items[15]} /></td>
                     <td><Hero {...items[16]} /></td>
                     <td><Hero {...items[17]} /></td>
                     <td><Hero {...items[18]} /></td>
-                    <td rowSpan='2' style={{ background: 'red' }}>CyDbl</td>
+                    <td rowSpan='2' style={{ background: 'red' }}> <Hero fullImg = {items.fullImg} /> sdffff</td>
                   </tr>
                   <tr>
                     <td><Hero {...items[19]} /></td>
@@ -237,11 +242,13 @@ export default class HeroList extends React.Component {
                   </tr>
                 </tbody>
               </table>
-
-            };
+            }
+          
+            
+           
         
         </div>
-
+        
       );
     }
   }

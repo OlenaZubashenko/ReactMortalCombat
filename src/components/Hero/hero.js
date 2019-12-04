@@ -1,6 +1,7 @@
 import React from 'react';
 import './hero.css';
 
+
 const Hero = ({id, name, url }) => {
 
 
@@ -13,7 +14,7 @@ const Hero = ({id, name, url }) => {
             backgroundRepeat: 'no-repeat'
         }}>
             <span>{name}</span>
-           
+         
         </div>
     )
 
