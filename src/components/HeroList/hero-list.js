@@ -10,7 +10,7 @@ export default class HeroList extends React.Component {
       error: null,
       isLoaded: false,
       items: [],
-      fullImg: true
+      
     };
     this.layout = [
       [1, 2, 3, 4, 5, 6, 7],
@@ -245,7 +245,7 @@ export default class HeroList extends React.Component {
                   <td><Hero {...items[13]} /></td>
                 </tr>
                 <tr>
-                  <td rowSpan='2' style={{ background: 'red' }}> 123</td>
+                  <td rowSpan='2' style={{ background: 'red' }} ></td>
                   <td><Hero {...items[14]} /></td>
                   <td><Hero {...items[15]} /></td>
                   <td><Hero {...items[16]} /></td>
@@ -276,7 +276,7 @@ export default class HeroList extends React.Component {
         this.activeCellId = moveHorisontal(this.activeCellId, -1);
 
       else if (e.key === 'ArrowRight')
-        this.activeCellId = moveHorisontal(this.activeCellId, 1);
+        this.activeCellId = moveHorisontal(this.activeCellId, 1)
 
       else if (e.key === 'ArrowUp')
         this.activeCellId = moveVertical(this.activeCellId, -1);
@@ -312,6 +312,3 @@ const updateSelection = (id) => {
   document.getElementById(`hero_${id}`).classList.add('active');
 };
 
-const showFighters = ()=>{
-
-}

@@ -17,7 +17,7 @@ export default class App extends React.Component {
         <div>
             <Router>
                 <ul>
-                    <li><Link to={{ pathname: '/select', query: { name: 'ryan' } }}>Hero selection</Link></li>
+                    <li><Link to={{ pathname: '/select' }}>Hero selection</Link></li>
                     <li><Link to='battle'>battle</Link></li>
                 </ul>
                 <Switch>
