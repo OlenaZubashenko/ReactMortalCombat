@@ -4,10 +4,6 @@ import './hero.css';
 
 export default class Hero extends React.Component {
 
-    onNameClick = () => {
-        console.log(this.props.fullImg);
-    }
-
     render() {
         const { id, name, url, fullImg } = this.props;
 
@@ -17,11 +13,7 @@ export default class Hero extends React.Component {
                 backgroundPosition: 'center',
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat'
-            }}>
-                <span onClick={this.onNameClick} >
-                    {name}
-                </span>
-
+            }}> 
             </div>
         )
     }

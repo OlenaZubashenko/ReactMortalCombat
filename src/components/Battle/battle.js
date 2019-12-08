@@ -3,7 +3,7 @@ import './battle.css'
 
 import BattleIcons from '../BattleIcons/battle-icons'
 
-const Battle = ({selected}) => {
+const Battle = ({selected}) => { debugger
     const battleImagesArr = [
         {img : '/img/circle-dragon.png'},
         {img : '/img/circle-dragon.png'},
@@ -17,13 +17,12 @@ const Battle = ({selected}) => {
     const elements = battleImagesArr.map((item) => {
         return (
 <ul className='image-item-list'>
-        <h1>{selected.hero}</h1>
+        {/* <h1>{selected.hero}</h1> */}
 <BattleIcons 
                 {...item}
                 />
 </ul>
-                
-            
+                         
         )
     })
     //const { selected } = this.props.selected;
@@ -31,7 +30,6 @@ const Battle = ({selected}) => {
         
 
         <div className='battle-wrapper'
-        //style = {{backgroundImage: `url(../../../public/img/mortal-kombat-background-battle.jpg)`}}
         >
             <h1>Battle 1</h1>
             <ul>

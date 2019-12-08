@@ -1,7 +1,9 @@
 import React from 'react';
-import Hero from '../Hero/hero'
-
+import Hero from '../Hero/hero';
+import { Redirect } from 'react-router-dom'
 import './hero-list.css';
+import Battle from '../Battle/battle';
+
 
 export default class HeroList extends React.Component {
   constructor(props) {
@@ -10,15 +12,8 @@ export default class HeroList extends React.Component {
       error: null,
       isLoaded: false,
       items: [],
-      
-    };
-    this.layout = [
-      [1, 2, 3, 4, 5, 6, 7],
-      [8, 9, 10, 11, 12, 13, 14],
-      [0, 15, 16, 17, 18, 19, 0],
-      [0, 20, 21, 22, 23, 24, 0],
-    ];
 
+    };
     this.setEventHandlers();
   }
 
@@ -198,72 +193,52 @@ export default class HeroList extends React.Component {
       )
   }
   componentDidUpdate() {
-    // if (!this.cells) {
-    //   let table = document.getElementById('heroes')
-    //   let rows = table.childNodes;
-    //   this.Cells = [];debugger
-    //   rows.forEach(row => {
-    //     row.childNodes.forEach(c => {
-    //       if(c) return
-    //     });
-    //   });
-    // }
     if (!this.activeCellId) {
       this.activeCellId = 1;
+      this.updateSelection();
     }
-
   }
   render() {
-    const { error, isLoaded, items } = this.state;
+    const { error, isLoaded, items, selectedHero, redirect } = this.state;
+    if (redirect) {
+    return <Redirect to='/battle' render={(props) => <Battle {...selectedHero}/>}/>;
+    }
     if (error) {
       return <div>Ошибка: {error.message}</div>;
     } else if (!isLoaded) {
       return <div>Загрузка... </div>;
     } else {
-      return (
-        <div className='hero-list-wrapper'>
-            <table>
-              <tbody id='heroes'>
-                <tr>
-                  <td><Hero {...items[0]} />
-                   
-                  </td>
-                  <td><Hero {...items[1]} /></td>
-                  <td><Hero {...items[2]} /></td>
-                  <td><Hero {...items[3]} /></td>
-                  <td><Hero {...items[4]} /></td>
-                  <td><Hero {...items[5]} /></td>
-                  <td><Hero {...items[6]} /></td>
-                </tr>
-                <tr>
-                  <td><Hero {...items[7]} /></td>
-                  <td><Hero {...items[8]} /></td>
-                  <td><Hero {...items[9]} /></td>
-                  <td><Hero {...items[10]} /></td>
-                  <td><Hero {...items[11]} /></td>
-                  <td><Hero {...items[12]} /></td>
-                  <td><Hero {...items[13]} /></td>
-                </tr>
-                <tr>
-                  <td rowSpan='2' style={{ background: 'red' }} ></td>
-                  <td><Hero {...items[14]} /></td>
-                  <td><Hero {...items[15]} /></td>
-                  <td><Hero {...items[16]} /></td>
-                  <td><Hero {...items[17]} /></td>
-                  <td><Hero {...items[18]} /></td>
-                  <td rowSpan='2'> <Hero fullImg={this.fullImg} /> sdffff</td>
-                </tr>
-                <tr>
-                  <td><Hero {...items[19]} /></td>
-                  <td><Hero {...items[20]} /></td>
-                  <td><Hero {...items[21]} /></td>
-                  <td><Hero {...items[22]} /></td>
-                  <td><Hero {...items[23]} /></td>
-                </tr>
-              </tbody>
-            </table>
-          }
 
+      return (
+
+        <div className='hero-list-wrapper'>
+
+          <div className='div1'><Hero {...items[0]} /></div>
+          <div className='div2'><Hero {...items[1]} /></div>
+          <div className='div3'><Hero {...items[2]} /></div>
+          <div className='div4'><Hero {...items[3]} /></div>
+          <div className='div5'><Hero {...items[4]} /></div>
+          <div className='div6'><Hero {...items[5]} /></div>
+          <div className='div7'><Hero {...items[6]} /></div>
+          <div className='div8'><Hero {...items[7]} /></div>
+          <div className='div9'><Hero {...items[8]} /></div>
+          <div className='div10'><Hero {...items[9]} /></div>
+          <div className='div11'><Hero {...items[10]} /></div>
+          <div className='div12'><Hero {...items[11]} /></div>
+          <div className='div13'><Hero {...items[12]} /></div>
+          <div className='div14'><Hero {...items[13]} /></div>
+          <div className='div15'><Hero {...items[14]} /></div>
+          <div className='div16'><Hero {...items[15]} /></div>
+          <div className='div17'><Hero {...items[16]} /></div>
+          <div className='div18'><Hero {...items[17]} /></div>
+          <div className='div19'><Hero {...items[18]} /></div>
+          <div className='div20'><Hero {...items[19]} /></div>
+          <div className='div21'><Hero {...items[20]} /></div>
+          <div className='div22'><Hero {...items[21]} /></div>
+          <div className='div23'><Hero {...items[22]} /></div>
+          <div className='div24'><Hero {...items[23]} /></div>
+          <div className='selected'><Hero {...selectedHero} /></div>
+          <div className='div26'><Hero {...items[25]} /></div>
         </div>
 
       );
@@ -272,21 +247,40 @@ export default class HeroList extends React.Component {
 
   setEventHandlers = () => {
     window.onkeyup = (e) => {
-      if (e.key === 'ArrowLeft')
-        this.activeCellId = moveHorisontal(this.activeCellId, -1);
+      if (e.key === 'Enter') {
+        this.setState({ redirect: true });
+      } else {
+        if (e.key === 'ArrowLeft')
+          this.activeCellId = moveHorisontal(this.activeCellId, -1);
 
-      else if (e.key === 'ArrowRight')
-        this.activeCellId = moveHorisontal(this.activeCellId, 1)
+        else if (e.key === 'ArrowRight')
+          this.activeCellId = moveHorisontal(this.activeCellId, 1)
 
-      else if (e.key === 'ArrowUp')
-        this.activeCellId = moveVertical(this.activeCellId, -1);
+        else if (e.key === 'ArrowUp')
+          this.activeCellId = moveVertical(this.activeCellId, -1);
 
-      else if (e.key === 'ArrowDown')
-        this.activeCellId = moveVertical(this.activeCellId, 1);
+        else if (e.key === 'ArrowDown')
+          this.activeCellId = moveVertical(this.activeCellId, 1);
 
-      updateSelection(this.activeCellId);
+        this.updateSelection();
+      }
     }
   }
+
+  ChooseHero = () => {
+    this.setState({
+      selectedHero: this.state.items.find(i => i.id == this.activeCellId)
+    });
+  };
+
+  updateSelection = () => {
+    let id = this.activeCellId;
+    var els = document.getElementsByClassName("active");
+    [].forEach.call(els, function (el) { el.classList.remove('active'); });
+
+    document.getElementById(`hero_${id}`).classList.add('active');
+    this.ChooseHero(id);
+  };
 }
 const moveVertical = (activeCellId, i) => {
   // activeCellId += i;
@@ -305,10 +299,8 @@ const moveHorisontal = (activeCellId, i) => {
   return activeCellId;
 }
 
-const updateSelection = (id) => {
-  var els = document.getElementsByClassName("active");
-  [].forEach.call(els, function (el) { el.classList.remove('active'); });
+// const ChooseHero = (id) => {
 
-  document.getElementById(`hero_${id}`).classList.add('active');
-};
+// };
+
 

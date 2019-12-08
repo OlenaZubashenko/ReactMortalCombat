@@ -12,7 +12,7 @@ export default class App extends React.Component {
     }
 
     render() {
-  let selectedHero = {hero : 'HAAAA'};
+//   let selectedHero = {hero : 'HAAAA'};
     return (
         <div>
             <Router>
@@ -24,7 +24,7 @@ export default class App extends React.Component {
                     <Route path='/select'>
                         <HeroList />
                     </Route>
-                    <Route path='/battle' component={() => <Battle selected={selectedHero} />}/>
+                    <Route path='/battle'><Battle  /></Route> 
                 </Switch>
             </Router>
         </div>
