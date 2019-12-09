@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from '../Hero/hero';
 import { Redirect } from 'react-router-dom'
 import './hero-list.css';
-import Battle from '../Battle/battle';
+
 
 
 export default class HeroList extends React.Component {

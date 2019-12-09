@@ -1,6 +1,5 @@
 import React from 'react';
 import './battle.css'
-import HeroList from '../HeroList/hero-list';
 import BattleIcons from '../BattleIcons/battle-icons'
 
 export default class Battle extends React.Component {
@@ -38,7 +37,7 @@ export default class Battle extends React.Component {
                 <h1>Battle 1</h1>
                 <ul className='heroes-battle-wrapper'>
                     <div><img src={this.state.selectedHero.url}/></div>
-                    <div><img src={this.state.selectedHero.url}/></div>
+                    <div><img src={this.state.items}/></div>
                 </ul>
                 <div className='icons-wrapper'>
                     {elements}
