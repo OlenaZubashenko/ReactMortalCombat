@@ -12,7 +12,7 @@ export default class HeroList extends React.Component {
       error: null,
       isLoaded: false,
       items: [],
-
+      selectedHero: props.selectedHero
     };
     this.setEventHandlers();
   }
@@ -201,7 +201,10 @@ export default class HeroList extends React.Component {
   render() {
     const { error, isLoaded, items, selectedHero, redirect } = this.state;
     if (redirect) {
-    return <Redirect to='/battle' render={(props) => <Battle {...selectedHero}/>}/>;
+      return <Redirect to={{
+        pathname:'/battle',
+        state: {selectedHero}
+      }} />;
     }
     if (error) {
       return <div>Ошибка: {error.message}</div>;

@@ -12,19 +12,19 @@ export default class App extends React.Component {
     }
 
     render() {
-//   let selectedHero = {hero : 'HAAAA'};
+    let selectedHero = {};
     return (
         <div>
             <Router>
                 <ul>
                     <li><Link to={{ pathname: '/select' }}>Hero selection</Link></li>
-                    <li><Link to='battle'>battle</Link></li>
+                    {/* <li><Link to='battle'>battle</Link></li> */}
                 </ul>
                 <Switch>
                     <Route path='/select'>
-                        <HeroList />
+                        <HeroList selectedHero={selectedHero}/>
                     </Route>
-                    <Route path='/battle'><Battle  /></Route> 
+                    <Route path='/battle' component={Battle}/>
                 </Switch>
             </Router>
         </div>
