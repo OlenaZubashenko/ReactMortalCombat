@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "42d28aac8ae414edfbd04cf3c3d0cb98",
+    "revision": "a3f7958f3e63ee47ea0c703e6da2006a",
     "url": "/ReactMortalCombat/index.html"
   },
   {
-    "revision": "ebeb79f5312e097709ae",
+    "revision": "2749a39a9658f661213e",
     "url": "/ReactMortalCombat/static/css/main.8d04cba8.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ReactMortalCombat/static/js/2.02177a05.chunk.js"
   },
   {
-    "revision": "ebeb79f5312e097709ae",
-    "url": "/ReactMortalCombat/static/js/main.d47248b0.chunk.js"
+    "revision": "2749a39a9658f661213e",
+    "url": "/ReactMortalCombat/static/js/main.2bcb8380.chunk.js"
   },
   {
     "revision": "3e4a45a0caf5240838ea",
