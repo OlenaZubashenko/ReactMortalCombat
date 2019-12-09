@@ -10,10 +10,11 @@ export default class Hero extends React.Component {
         return (
             <div id={`hero_${id}`} style={{
                 backgroundImage: `url(${url})`,
-                backgroundPosition: 'center',
-                backgroundSize: 'contain',
-                backgroundRepeat: 'no-repeat'
-            }}> 
+                backgroundPosition: 'top center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                boxSizing: 'border-box'
+            }}>
             </div>
         )
     }

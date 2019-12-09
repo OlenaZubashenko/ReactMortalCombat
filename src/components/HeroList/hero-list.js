@@ -27,12 +27,10 @@ export default class HeroList extends React.Component {
             url: '/img/kobra.png',
             fullImg: '/img/kano.jpg',
             selected: 'false',
-            row: 0,
-            column: 0
           },
           {
-            name: 'kano',
-            url: '/img/kano.jpg',
+            name: 'body',
+            url: '/img/body.png',
             fullImg: '/img/kano.jpg',
             selected: 'false'
           },
@@ -43,8 +41,8 @@ export default class HeroList extends React.Component {
             selected: 'false'
           },
           {
-            name: 'kano1',
-            url: '/img/kano.jpg',
+            name: 'Noobcutout',
+            url: '/img/Noobcutout.png',
             fullImg: '/img/kano.jpg',
             selected: 'false'
           },
@@ -67,8 +65,8 @@ export default class HeroList extends React.Component {
             selected: 'false'
           },
           {
-            name: 'sindel',
-            url: '/img/sindel.jpg',
+            name: 'sab',
+            url: '/img/sab.png',
             fullImg: '/img/kano.jpg',
             selected: 'false'
           },
@@ -85,8 +83,8 @@ export default class HeroList extends React.Component {
             selected: 'false'
           },
           {
-            name: 'just',
-            url: '/img/just.png',
+            name: 'scorpion',
+            url: '/img/scorpion.png',
             fullImg: '/img/kano.jpg',
             selected: 'false'
           },
@@ -103,29 +101,66 @@ export default class HeroList extends React.Component {
             selected: 'false'
           },
           {
-            name: 'kobra',
-            url: '/img/kobra.png',
+            name: 'cyrax',
+            url: '/img/cyrax.png',
             fullImg: '/img/kano.jpg',
             selected: 'false'
           },
           {
-            name: 'kano',
-            url: '/img/kano.jpg',
+            name: 'sab',
+            url: '/img/sab.png',
             fullImg: '/img/kano.jpg',
             selected: 'false'
           },
           {
-            name: 'kabal',
-            url: '/img/kabal.png',
+            name: 'subzero',
+            url: '/img/subzero.png',
             fullImg: '/img/kano.jpg',
             selected: 'false'
           },
           {
-            name: 'sector',
-            url: '/img/Sektor.png',
+            name: 'shao',
+            url: '/img/Shao-Khan.png',
             fullImg: '/img/kano.jpg',
             selected: 'false'
           },
+          {
+            name: 'quan',
+            url: '/img/quan.png',
+            fullImg: '/img/kano.jpg',
+            selected: 'false'
+          },
+          {
+            name: 'cutout',
+            url: '/img/cutout.png',
+            fullImg: '/img/kano.jpg',
+            selected: 'false'
+          },
+          {
+            name: 'Noobcutout',
+            url: '/img/Noobcutout.png',
+            fullImg: '/img/kano.jpg',
+            selected: 'false'
+          },
+          {
+            name: 'Jaxcutmk9zo',
+            url: '/img/Jaxcutmk9zo.png',
+            fullImg: '/img/kano.jpg',
+            selected: 'false'
+          },
+          {
+            name: 'body',
+            url: '/img/body.png',
+            fullImg: '/img/kano.jpg',
+            selected: 'false'
+          },
+          {
+            name: 'frost',
+            url: '/img/frost.png',
+            fullImg: '/img/kano.jpg',
+            selected: 'false'
+          },
+          
           {
             name: 'Sheeva',
             url: '/img/Sheeva.png',
@@ -133,41 +168,12 @@ export default class HeroList extends React.Component {
             selected: 'false'
           },
           {
-            name: 'sindel',
-            url: '/img/sindel.jpg',
+            name: 'main',
+            url: '/img/main.jpg',
             fullImg: '/img/kano.jpg',
             selected: 'false'
           },
-          {
-            name: 'stryker',
-            url: '/img/Stryker.png',
-            fullImg: '/img/kano.jpg',
-            selected: 'false'
-          },
-          {
-            name: 'kitana',
-            url: '/img/kitana.png',
-            fullImg: '/img/kano.jpg',
-            selected: 'false'
-          },
-          {
-            name: 'just',
-            url: '/img/just.png',
-            fullImg: '/img/kano.jpg',
-            selected: 'false'
-          },
-          {
-            name: 'frost',
-            url: '/img/frost.png',
-            fullImg: '/img/kano.jpg',
-            selected: 'false'
-          },
-          {
-            name: 'Ashrah',
-            url: '/img/Ashrah.png',
-            fullImg: '/img/kano.jpg',
-            selected: 'false'
-          }];
+         ];
 
         let i = 1;
         data.map(e => e.id = i++)
@@ -202,8 +208,8 @@ export default class HeroList extends React.Component {
     const { error, isLoaded, items, selectedHero, redirect } = this.state;
     if (redirect) {
       return <Redirect to={{
-        pathname:'/battle',
-        state: {selectedHero}
+        pathname: '/battle',
+        state: { selectedHero }
       }} />;
     }
     if (error) {
@@ -241,7 +247,7 @@ export default class HeroList extends React.Component {
           <div className='div23'><Hero {...items[22]} /></div>
           <div className='div24'><Hero {...items[23]} /></div>
           <div className='selected'><Hero {...selectedHero} /></div>
-          <div className='div26'><Hero {...items[25]} /></div>
+          <div className='div26'><Hero {...items[24]} /></div>
         </div>
 
       );
