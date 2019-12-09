@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/ReactMortalCombat/static/css/main.60a8fd0e.chunk.css",
-    "main.js": "/ReactMortalCombat/static/js/main.a349b4de.chunk.js",
-    "main.js.map": "/ReactMortalCombat/static/js/main.a349b4de.chunk.js.map",
+    "main.css": "/ReactMortalCombat/static/css/main.8d04cba8.chunk.css",
+    "main.js": "/ReactMortalCombat/static/js/main.caf48dcb.chunk.js",
+    "main.js.map": "/ReactMortalCombat/static/js/main.caf48dcb.chunk.js.map",
     "runtime-main.js": "/ReactMortalCombat/static/js/runtime-main.72aff12b.js",
     "runtime-main.js.map": "/ReactMortalCombat/static/js/runtime-main.72aff12b.js.map",
-    "static/js/2.61decd2e.chunk.js": "/ReactMortalCombat/static/js/2.61decd2e.chunk.js",
-    "static/js/2.61decd2e.chunk.js.map": "/ReactMortalCombat/static/js/2.61decd2e.chunk.js.map",
+    "static/js/2.02177a05.chunk.js": "/ReactMortalCombat/static/js/2.02177a05.chunk.js",
+    "static/js/2.02177a05.chunk.js.map": "/ReactMortalCombat/static/js/2.02177a05.chunk.js.map",
     "index.html": "/ReactMortalCombat/index.html",
-    "precache-manifest.dc69a33e8cc1cd2dcb737c4cd7063305.js": "/ReactMortalCombat/precache-manifest.dc69a33e8cc1cd2dcb737c4cd7063305.js",
+    "precache-manifest.60202d63d2eb728430b04343a7c98188.js": "/ReactMortalCombat/precache-manifest.60202d63d2eb728430b04343a7c98188.js",
     "service-worker.js": "/ReactMortalCombat/service-worker.js",
-    "static/css/main.60a8fd0e.chunk.css.map": "/ReactMortalCombat/static/css/main.60a8fd0e.chunk.css.map"
+    "static/css/main.8d04cba8.chunk.css.map": "/ReactMortalCombat/static/css/main.8d04cba8.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.72aff12b.js",
-    "static/js/2.61decd2e.chunk.js",
-    "static/css/main.60a8fd0e.chunk.css",
-    "static/js/main.a349b4de.chunk.js"
+    "static/js/2.02177a05.chunk.js",
+    "static/css/main.8d04cba8.chunk.css",
+    "static/js/main.caf48dcb.chunk.js"
   ]
 }
