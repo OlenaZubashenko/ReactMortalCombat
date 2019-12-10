@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/ReactMortalCombat/static/css/main.8d04cba8.chunk.css",
-    "main.js": "/ReactMortalCombat/static/js/main.1991b635.chunk.js",
-    "main.js.map": "/ReactMortalCombat/static/js/main.1991b635.chunk.js.map",
+    "main.css": "/ReactMortalCombat/static/css/main.e7e46f84.chunk.css",
+    "main.js": "/ReactMortalCombat/static/js/main.896912d9.chunk.js",
+    "main.js.map": "/ReactMortalCombat/static/js/main.896912d9.chunk.js.map",
     "runtime-main.js": "/ReactMortalCombat/static/js/runtime-main.72aff12b.js",
     "runtime-main.js.map": "/ReactMortalCombat/static/js/runtime-main.72aff12b.js.map",
     "static/js/2.02177a05.chunk.js": "/ReactMortalCombat/static/js/2.02177a05.chunk.js",
     "static/js/2.02177a05.chunk.js.map": "/ReactMortalCombat/static/js/2.02177a05.chunk.js.map",
     "index.html": "/ReactMortalCombat/index.html",
-    "precache-manifest.ead5d67c6bb48248c17c5c9b1abdd78f.js": "/ReactMortalCombat/precache-manifest.ead5d67c6bb48248c17c5c9b1abdd78f.js",
+    "precache-manifest.61490b5454647c43b3c9724b3c2bb7a2.js": "/ReactMortalCombat/precache-manifest.61490b5454647c43b3c9724b3c2bb7a2.js",
     "service-worker.js": "/ReactMortalCombat/service-worker.js",
-    "static/css/main.8d04cba8.chunk.css.map": "/ReactMortalCombat/static/css/main.8d04cba8.chunk.css.map"
+    "static/css/main.e7e46f84.chunk.css.map": "/ReactMortalCombat/static/css/main.e7e46f84.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.72aff12b.js",
     "static/js/2.02177a05.chunk.js",
-    "static/css/main.8d04cba8.chunk.css",
-    "static/js/main.1991b635.chunk.js"
+    "static/css/main.e7e46f84.chunk.css",
+    "static/js/main.896912d9.chunk.js"
   ]
 }
