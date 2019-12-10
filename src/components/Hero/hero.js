@@ -9,7 +9,7 @@ export default class Hero extends React.Component {
 
         return (
             <div id={`hero_${id}`} style={{
-                backgroundImage: `url(${url})`,
+                backgroundImage: `url(${process.env.PUBLIC_URL}/${url})`,
                 backgroundPosition: 'top center',
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',

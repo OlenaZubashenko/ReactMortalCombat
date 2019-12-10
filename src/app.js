@@ -15,14 +15,14 @@ export default class App extends React.Component {
         <div>
             <Router>
                 <ul className='chooseYourHero'>
-                    <li ><Link to={{ pathname: '/select' }}>Chose your hero</Link></li>
+                    <li ><Link to={`${process.env.PUBLIC_URL}/select` }>Chose your hero.</Link></li>
                     {/* <li><Link to='battle'>battle</Link></li> */}
                 </ul>
                 <Switch>
-                    <Route path='/select'>
+                    <Route path={`${process.env.PUBLIC_URL}/select`}>
                         <HeroList selectedHero={selectedHero}/>
                     </Route>
-                    <Route path='/battle' component={Battle}/>
+                    <Route path={`${process.env.PUBLIC_URL}/battle`} component={Battle}/>
                 </Switch>
             </Router>
         </div>

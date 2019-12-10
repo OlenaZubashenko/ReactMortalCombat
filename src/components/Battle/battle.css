@@ -28,7 +28,7 @@ border: 5px solid grey;
    padding: 0;
 }
 .heroes-battle-wrapper> div>img {
-    width: 200px;
+    width: 250px;
     height: 300px;
     border: 5px solid grey;
     border-radius: 5px;
@@ -41,3 +41,5 @@ h1 {
     font-weight: 900;
   
 }
+
+
